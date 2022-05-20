@@ -1,33 +1,4 @@
-<?php
-	// Variable global perquè totes les funcions tinguin accés a aquest objecte.
-	// S'instancia en modConnect() i per cridar-lo es farà amb $GLOBALS['conn']
-	$conn;
-	
-	/**
-	* Funció bàsica per connectar-nos a la base de dades.
-	* Inicialització de l'objecte global $conn.
-	* Qualsevol variació dels paràmetres d'accés a la BD es canvia aquí.
-	*
-	* @return (Array) associatiu amb resultats o bé un missatge d'error.
-	*/
-	function modConnect()
-	{
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "PROJECTE";
 
-		try {
-			$GLOBALS['conn'] = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-			// set the PDO error mode to exception
-			$GLOBALS['conn']->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			return ["Connection" => "Success"];
-		}
-		catch(PDOException $e) {
-			return ["Connection failed" => $e->getMessage()];
-		}
-	}
-?>    
 <!DOCTYPE html>
 <html class="h-100">
     <head>

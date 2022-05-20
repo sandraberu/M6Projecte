@@ -27,13 +27,7 @@
 					<div class="form-group row">
 						<label for="rol" class="col-sm-2 col-form-label font-weight-bold">Rol</label>
 						<div class="col-sm-10">
-						<?php
-                            $ensenyament = $result[0]['Rol'];
-							echo "<select class='form-control' name='rol' id='rol'>";
-									echo "<option value='SMX'" . ($ensenyament == 'admin' ? 'selected' : '') . ">Editor</option>";
-									echo "<option value='ASIX'" . ($ensenyament == 'editor' ? 'selected' : '') . ">Admin</option>";
-							echo "</select>";
-						?>
+							<input type="text" class="form-control" name="rol" id="rol" required>
 						</div>
 					</div>
 					<div class="form-group row">
@@ -56,8 +50,5 @@
 				</form>				
 			</div>
 		</div>
-		<footer class="footer fixed-bottom mt-auto py-3 px-3 bg-light text-right">
-            <a href="?action=logout" class="btn btn-secondary btn-sm" tabindex="-1" role="button" aria-disabled="true">Logout</a>
-        </footer>
 	</body>
 </html>

@@ -15,7 +15,7 @@
 		$servername = "localhost";
 		$username = "root";
 		$password = "";
-		$dbname = "PROJECTE";
+		$dbname = "Projecte";
 
 		try {
 			$GLOBALS['conn'] = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

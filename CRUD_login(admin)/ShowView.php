@@ -48,8 +48,5 @@
 				</form>				
 			</div>
 		</div>
-		<footer class="footer fixed-bottom mt-auto py-3 px-3 bg-light text-right">
-            <a href="?action=logout" class="btn btn-secondary btn-sm" tabindex="-1" role="button" aria-disabled="true">Logout</a>
-        </footer>
 	</body>
 </html>

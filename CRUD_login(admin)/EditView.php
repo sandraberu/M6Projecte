@@ -33,13 +33,7 @@
 					<div class="form-group row">
 						<label for="rol" class="col-sm-2 col-form-label font-weight-bold">Rol</label>
 						<div class="col-sm-10">
-						<?php
-                            $ensenyament = $result[0]['Rol'];
-							echo "<select class='form-control' name='rol' id='rol'>";
-									echo "<option value='SMX'" . ($ensenyament == 'admin' ? 'selected' : '') . ">Editor</option>";
-									echo "<option value='ASIX'" . ($ensenyament == 'editor' ? 'selected' : '') . ">Admin</option>";
-							echo "</select>";
-						?>
+							<input type="text" class="form-control" id="rol" name="rol" value="<?php echo $result[0]['Rol']; ?>">
 						</div>
 					</div>
 					<div class="form-group row">
@@ -48,10 +42,11 @@
 							<input type="text" class="form-control" id="usuari" name="usuari" value="<?php echo $result[0]['Usuari']; ?>">
 						</div>
 					</div>
+					<!--- Contrassenya -->
 					<div class="form-group row">
 						<label for="contrassenya" class="col-sm-2 col-form-label font-weight-bold">Contrassenya</label>
 						<div class="col-sm-10">
-							<input type="password" class="form-control" id="contrassenya" name="contrassenya" value="<?php echo $result[0]['Contrassenya']; ?>">
+							<input type="password" class="form-control" id="usuari" name="contrassenya" value="<?php echo $result[0]['Contrassenya']; ?>">
 						</div>
 					</div>
 					<input type="hidden" name="action" value="up">
@@ -62,8 +57,5 @@
 				</form>				
 			</div>
 		</div>
-		<footer class="footer fixed-bottom mt-auto py-3 px-3 bg-light text-right">
-            <a href="?action=logout" class="btn btn-secondary btn-sm" tabindex="-1" role="button" aria-disabled="true">Logout</a>
-        </footer>
 	</body>
 </html>
